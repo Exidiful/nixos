@@ -73,7 +73,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.mpd.enable = true;
-
   # Enable the Budgie Desktop environment.
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.budgie.enable = true;
@@ -83,6 +82,7 @@
     layout = "us";
     xkbVariant = "";
   };
+
 
   # Enable sound with pipewire.
   sound.enable = true;
@@ -135,7 +135,7 @@
     swww
     (pkgs.waybar.overrideAttrs (oldAttrs: { mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ]; }))
     waybar
-    emacs
+    emacs29-pgtk
     git
     powertop
     killall
@@ -167,6 +167,8 @@
     typescript
     cmake
     ninja
+    luarocks
+    asciiquarium
   ];
 
 
